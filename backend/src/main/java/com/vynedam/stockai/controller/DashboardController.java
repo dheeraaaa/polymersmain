@@ -1,0 +1,2 @@
+package com.vynedam.stockai.controller; import com.vynedam.stockai.service.DashboardService; import java.util.*; import org.springframework.web.bind.annotation.*;
+@RestController @RequestMapping("/api/v1/dashboard") public class DashboardController {private final DashboardService service;public DashboardController(DashboardService s){service=s;}@GetMapping("/summary")Map<String,Object>summary(){return service.summary();}}

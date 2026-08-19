@@ -1,0 +1,3 @@
+package com.vynedam.stockai.model;
+import com.vynedam.stockai.domain.BatchStatus; import java.time.Instant; import org.springframework.data.annotation.Id; import org.springframework.data.mongodb.core.index.Indexed; import org.springframework.data.mongodb.core.mapping.Document;
+@Document("batches") public class Batch extends BaseDocument { @Id public String id; @Indexed(unique=true) public String batchNumber; public String materialId; public String supplierLot; public String warehouseId; public String unitId; public double quantity; public String uom; public Instant receivedAt; public Instant expiresAt; public BatchStatus status; @Indexed(unique=true,sparse=true) public String barcode; }

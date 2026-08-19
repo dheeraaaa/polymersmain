@@ -1,0 +1,2 @@
+package com.vynedam.stockai.dto; import com.vynedam.stockai.domain.Role; import jakarta.validation.constraints.*; import java.util.Set;
+public final class UserDtos{private UserDtos(){} public record UserCreateRequest(@NotBlank String name,@NotBlank @Email String email,@NotBlank @Size(min=12) String password,@NotNull Role role,String unitId,Set<String> warehouseIds){}public record UserUpdateRequest(@NotBlank String name,@NotNull Role role,String unitId,Set<String> warehouseIds){} }

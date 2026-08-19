@@ -1,0 +1,2 @@
+package com.vynedam.stockai.security; import com.vynedam.stockai.exception.ApiException; import org.springframework.http.HttpStatus; import org.springframework.security.core.Authentication; import org.springframework.stereotype.Component;
+@Component public class CurrentUser { public String id(Authentication a){if(a==null||!a.isAuthenticated())throw new ApiException(HttpStatus.UNAUTHORIZED,"UNAUTHENTICATED","Bearer token required");return (String)a.getPrincipal();} }

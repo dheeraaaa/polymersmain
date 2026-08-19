@@ -1,0 +1,1 @@
+package com.vynedam.stockai.repository; import com.vynedam.stockai.model.Supplier; import org.springframework.data.mongodb.repository.MongoRepository; public interface SupplierRepository extends MongoRepository<Supplier,String>{boolean existsByCode(String code);}

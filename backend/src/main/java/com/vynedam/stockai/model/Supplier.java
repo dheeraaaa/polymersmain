@@ -1,0 +1,2 @@
+package com.vynedam.stockai.model; import org.springframework.data.annotation.Id; import org.springframework.data.mongodb.core.index.Indexed; import org.springframework.data.mongodb.core.mapping.Document;
+@Document("suppliers") public class Supplier extends BaseDocument{@Id public String id;@Indexed(unique=true)public String code;public String name;public String contactName;public String email;public String phone;public String gstin;public int leadTimeDays;public boolean active=true;}

@@ -1,0 +1,1 @@
+package com.vynedam.stockai.repository; import com.vynedam.stockai.model.Warehouse; import org.springframework.data.mongodb.repository.MongoRepository; public interface WarehouseRepository extends MongoRepository<Warehouse,String>{boolean existsByCode(String code);}

@@ -1,0 +1,3 @@
+package com.vynedam.stockai.model;
+import com.vynedam.stockai.domain.QualityResult; import java.util.List; import org.springframework.data.annotation.Id; import org.springframework.data.mongodb.core.mapping.Document;
+@Document("quality_inspections") public class QualityInspection extends BaseDocument { @Id public String id; public String batchId; public String stage; public QualityResult result; public List<TestResult> tests; public String notes; public String inspectedBy; public static class TestResult { public String name; public String value; public String unit; public boolean withinSpec; } }

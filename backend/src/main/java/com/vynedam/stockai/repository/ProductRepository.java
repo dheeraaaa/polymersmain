@@ -1,0 +1,1 @@
+package com.vynedam.stockai.repository; import com.vynedam.stockai.model.Product; import org.springframework.data.mongodb.repository.MongoRepository; public interface ProductRepository extends MongoRepository<Product,String>{boolean existsBySku(String sku);}

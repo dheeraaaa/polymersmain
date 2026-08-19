@@ -1,0 +1,1 @@
+package com.vynedam.stockai.repository; import com.vynedam.stockai.model.PurchaseOrder; import org.springframework.data.mongodb.repository.MongoRepository; public interface PurchaseOrderRepository extends MongoRepository<PurchaseOrder,String>{}

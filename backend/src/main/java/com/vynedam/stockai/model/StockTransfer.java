@@ -1,0 +1,3 @@
+package com.vynedam.stockai.model;
+import com.vynedam.stockai.domain.TransferStatus; import org.springframework.data.annotation.Id; import org.springframework.data.mongodb.core.index.Indexed; import org.springframework.data.mongodb.core.mapping.Document;
+@Document("stock_transfers") public class StockTransfer extends BaseDocument { @Id public String id; @Indexed(unique=true) public String transferNumber; public String batchId; public String destinationBatchId; public String fromWarehouseId; public String toWarehouseId; public double quantity; public TransferStatus status; public String requestedBy; public String approvedBy; }

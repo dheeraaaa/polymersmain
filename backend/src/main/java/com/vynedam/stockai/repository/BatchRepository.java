@@ -1,0 +1,1 @@
+package com.vynedam.stockai.repository; import com.vynedam.stockai.model.Batch; import com.vynedam.stockai.domain.BatchStatus; import java.util.*; import org.springframework.data.mongodb.repository.MongoRepository; public interface BatchRepository extends MongoRepository<Batch,String>{ List<Batch> findByStatus(BatchStatus status); Optional<Batch> findByBarcode(String barcode); }

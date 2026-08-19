@@ -1,0 +1,1 @@
+package com.vynedam.stockai.repository; import com.vynedam.stockai.model.QualityInspection; import org.springframework.data.mongodb.repository.MongoRepository; public interface QualityInspectionRepository extends MongoRepository<QualityInspection,String>{}

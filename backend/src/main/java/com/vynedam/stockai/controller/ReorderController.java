@@ -1,0 +1,2 @@
+package com.vynedam.stockai.controller; import com.vynedam.stockai.service.ReorderService; import java.util.*; import org.springframework.web.bind.annotation.*;
+@RestController@RequestMapping("/api/v1/reorder-recommendations")public class ReorderController{private final ReorderService s;public ReorderController(ReorderService x){s=x;}@GetMapping List<Map<String,Object>>list(){return s.recommendations();}}
