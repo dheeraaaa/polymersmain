@@ -7,3 +7,4 @@ coverage/
 reports/
 npm-debug.log*
 requirement_docs/
+backend/target/
